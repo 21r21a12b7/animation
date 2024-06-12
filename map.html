@@ -243,9 +243,9 @@
 <body>
     <header>
         <div class="logo-menu">
-            <img class="logo" src="img/logo.svg" alt="Logo" onclick="window.location.href='index.html';">
-            <img class="change" src="img/change.svg" alt="Change" onclick="window.location.href='index.html';">
-            <img class="settings" src="img/settings.svg" alt="Settings" onclick="window.location.href='index.html';">
+            <img class="logo" src="img/logo.svg" alt="Logo" onclick="redirectToIndex();">
+            <img class="change" src="img/change.svg" alt="Change" onclick="redirectToIndex();">
+            <img class="settings" src="img/settings.svg" alt="Settings" onclick="redirectToIndex();">
         </div>
         <div class="update-from-to">
             <span id="routeText">To BusStop</span>
@@ -289,6 +289,12 @@
     <img class="follow-marker-button" src="img/follow.svg" alt="Follow Marker" onclick="toggleFollowMarker()">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script>
+        function redirectToIndex() {
+            history.replaceState(null, '', 'index.html');
+            location.replace('index.html');
+        }
+    </script>    
     <script>
         let previousBusLocation = [0, 0];
         let presentBusLocation = [0, 0];
