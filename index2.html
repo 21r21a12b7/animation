@@ -43,14 +43,12 @@
     </div>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const lottiePlayer2 = document.getElementById('lottie-player2');
+        const lottiePlayer2 = document.getElementById('lottie-player2');
 
-            lottiePlayer2.addEventListener('complete', function() {
-                document.getElementById('animation-overlay').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-                document.body.style.overflow = 'auto'; // Restore scroll if necessary
-            });
+        lottiePlayer2.addEventListener('complete', function() {
+            document.getElementById('animation-overlay').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            document.body.style.overflow = 'auto'; // Restore scroll if necessary
         });
     </script>
 </body>
