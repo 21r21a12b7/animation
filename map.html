@@ -404,7 +404,7 @@
                         animateMarker(busMarker, previousBusLocation, presentBusLocation, 1000);
                     }
 
-                    console.log(shouldFollowMarker);
+                    // console.log(shouldFollowMarker);
 
                     if (shouldFollowMarker) {
                         map.flyTo(presentBusLocation, 19, {
@@ -448,7 +448,7 @@
 
         function toggleFollowMarker() {
             shouldFollowMarker = true;
-            console.log(shouldFollowMarker);
+            // console.log(shouldFollowMarker);
             polyline.setStyle({ weight: 0 });
             document.querySelector('.follow-marker-button').style.backgroundColor = 'white';
             map.flyTo(presentBusLocation, 19, {
@@ -591,15 +591,15 @@
             });
         });
 
-        map.on('zoomstart', function () {
+        map.on('click', function () {
             shouldFollowMarker = false;
-            console.log(shouldFollowMarker);
+            // console.log(shouldFollowMarker);
             document.querySelector('.follow-marker-button').style.backgroundColor = 'yellow';
         });
 
         map.on('dragstart', function () {
             shouldFollowMarker = false;
-            console.log(shouldFollowMarker);
+            // console.log(shouldFollowMarker);
             document.querySelector('.follow-marker-button').style.backgroundColor = 'yellow';
         });
 
@@ -635,7 +635,7 @@
                     routeText.textContent = "To BusStop"; // Update text
                     fetchBusLocation();
                 }
-                console.log(toLocation);
+                // console.log(toLocation);
             });
         });
 
