@@ -35,8 +35,7 @@
 </head>
 <body>
     <div id="animation-overlay">
-        <dotlottie-player id="lottie-player1" src="https://lottie.host/e6bb95f8-b338-48c8-8db2-4262881b6ccb/GttFFZSXGj.json" background="transparent" speed="1.1" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay></dotlottie-player>
-        <dotlottie-player id="lottie-player2" src="https://lottie.host/9fa3e8bc-0ce9-4b22-8641-a6528276f61f/8iPMhAQnsD.json" background="transparent" speed="1" style="width: 300px; height: 300px; display: none;"></dotlottie-player>
+        <dotlottie-player id="lottie-player2" src="https://lottie.host/9fa3e8bc-0ce9-4b22-8641-a6528276f61f/8iPMhAQnsD.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay></dotlottie-player>
     </div>
     <div id="main-content">
         <h1>Welcome to My Website</h1>
@@ -45,14 +44,7 @@
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const lottiePlayer1 = document.getElementById('lottie-player1');
             const lottiePlayer2 = document.getElementById('lottie-player2');
-
-            lottiePlayer1.addEventListener('complete', function() {
-                lottiePlayer1.style.display = 'none';
-                lottiePlayer2.style.display = 'block';
-                lottiePlayer2.play();
-            });
 
             lottiePlayer2.addEventListener('complete', function() {
                 document.getElementById('animation-overlay').style.display = 'none';
