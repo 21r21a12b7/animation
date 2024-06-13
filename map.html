@@ -243,7 +243,8 @@
 <body>
     <header>
         <div class="logo-menu">
-            <img class="logo" src="img/logo.svg" alt="Logo" onclick="redirectToIndex();">
+            <a href="/index.html"><img class="logo" src="img/logo.svg" alt="Logo" onclick="redirectToIndex();"></a>
+            
             <img class="change" src="img/change.svg" alt="Change" onclick="redirectToIndex();">
             <img class="settings" src="img/settings.svg" alt="Settings" onclick="redirectToIndex();">
         </div>
@@ -290,10 +291,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <script>
-        function redirectToIndex() {
-            history.replaceState(null, '', 'index.html');
-            location.replace('index.html');
-        }
+       
     </script>    
     <script>
         let previousBusLocation = [0, 0];
