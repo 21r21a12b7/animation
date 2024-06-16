@@ -242,11 +242,10 @@
 
 <body>
     <header>
-        <div class="logo-menu">
-            <a href="/index.html"><img class="logo" src="img/logo.svg" alt="Logo" onclick="redirectToIndex();"></a>
-            
-            <img class="change" src="img/change.svg" alt="Change" onclick="redirectToIndex();">
-            <img class="settings" src="img/settings.svg" alt="Settings" onclick="redirectToIndex();">
+        <div class="logo-menu"> 
+            <img class="logo" src="img/logo.svg" alt="Logo" onclick="redirectToIndex();">
+            <img class="change" src="img/change.svg" alt="Change" onclick="redirectToChange();">
+            <img class="settings" src="img/settings.svg" alt="Settings" onclick="redirectToSettings();">
         </div>
         <div class="update-from-to">
             <span id="routeText">To BusStop</span>
@@ -291,8 +290,19 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
     <script>
-       
-    </script>    
+        function redirectToIndex() {
+            window.parent.postMessage('redirect', '*'); // Send message to parent window (index.html)
+        }
+        
+        function redirectToChange() {
+            window.parent.postMessage('redirect', '*'); // Example: You can implement similar functions for other buttons
+        }
+        
+        function redirectToSettings() {
+            window.parent.postMessage('redirect', '*');
+        }
+    </script>
+     
     <script>
         let previousBusLocation = [0, 0];
         let presentBusLocation = [0, 0];

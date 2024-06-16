@@ -48,6 +48,12 @@
             document.getElementById('animation-overlay').style.display = 'none';
             document.body.style.overflow = 'auto'; // Restore scroll if necessary
         });
+
+        window.addEventListener('message', function(event) {
+            if (event.data === 'redirect') {
+                window.location.href = 'index.html';
+            }
+        });
     </script>
 </body>
 </html>
