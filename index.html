@@ -50,7 +50,13 @@
         });
 
         window.addEventListener('message', function(event) {
-            if (event.data === 'redirect') {
+            if (event.data === 'reDirectToHomePage') {
+                window.location.href = 'index.html';
+            }
+            else if (event.data === 'reDirectToChangeBusPage') {
+                window.location.href = 'index.html';
+            }
+            else if (event.data === 'reDirectToSettingsPage') {
                 window.location.href = 'index.html';
             }
         });
